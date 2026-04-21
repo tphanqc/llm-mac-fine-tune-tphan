@@ -1,0 +1,9 @@
+base_model: "mlx-community/Qwen2.5-1.5B-Instruct-4bit"
+model_type: "causal_lm"
+tokenizer_path: null # Defaults to base_model if null
+trust_remote_code: true
+device: "mps" # For HF engine
+dtype: "float16"
+quantization:
+  bits: 4
+  method: "mlx" # mlx or bitsandbytes (note: bitsandbytes has limited MPS support)

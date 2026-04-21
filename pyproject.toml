@@ -1,0 +1,26 @@
+[project]
+name = "llm-mac-fine-tune"
+version = "0.1.0"
+description = "High-performance LLM fine-tuning on macOS using PyTorch, Hugging Face, and MLX"
+authors = [{ name = "Thomas Phan" }]
+dependencies = [
+    "torch",
+    "transformers",
+    "peft",
+    "mlx",
+    "mlx-lm",
+    "datasets",
+    "accelerate",
+    "pyyaml",
+    "fastapi",
+    "uvicorn",
+    "python-dotenv",
+    "wandb",
+    "tqdm",
+    "scipy",
+    "numpy",
+]
+
+[build-system]
+requires = ["setuptools", "wheel"]
+build-backend = "setuptools.build_meta"

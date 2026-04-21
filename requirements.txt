@@ -1,0 +1,15 @@
+torch
+transformers
+peft
+mlx
+mlx-lm
+datasets
+accelerate
+pyyaml
+fastapi
+uvicorn
+python-dotenv
+wandb
+tqdm
+scipy
+numpy

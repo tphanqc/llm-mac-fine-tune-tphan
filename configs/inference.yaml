@@ -1,0 +1,7 @@
+max_tokens: 512
+temp: 0.7
+top_p: 0.9
+repetition_penalty: 1.1
+do_sample: true
+stream: true
+adapter_path: "adapters"

@@ -1,0 +1,17 @@
+engine: "mlx" # mlx or hf
+iters: 1000
+batch_size: 4
+learning_rate: 1e-5
+steps_per_report: 10
+steps_per_eval: 100
+resume_adapter_file: null
+adapter_path: "adapters"
+save_every: 100
+lora_parameters:
+  rank: 8
+  alpha: 16
+  dropout: 0.05
+  target_modules: ["q_proj", "v_proj"]
+wandb:
+  enabled: false
+  project: "llm-mac-fine-tune"
