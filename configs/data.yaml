@@ -1,4 +1,4 @@
-dataset_name: "trl-lib/Capybara"
+dataset_name: "tatsu-lab/alpaca"
 train_split: "train"
 eval_split: "test"
 test_size: 0.1

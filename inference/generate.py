@@ -1,6 +1,7 @@
 import argparse
 import yaml
 from mlx_lm import load, generate
+from mlx_lm.sample_utils import make_sampler
 
 def main():
     parser = argparse.ArgumentParser(description="LLM Mac Fine-Tune Generator")
@@ -23,13 +24,18 @@ def main():
     print(f"Loading model: {model_path}")
     model, tokenizer = load(model_path, adapter_path=adapter_path)
     
+    sampler = make_sampler(
+        temp=inference_config.get("temp", 0.7),
+        top_p=inference_config.get("top_p", 0.9),
+    )
+    
     print(f"Generating for prompt: {args.prompt}")
     response = generate(
         model,
         tokenizer,
         prompt=args.prompt,
         max_tokens=inference_config["max_tokens"],
-        temp=inference_config["temp"],
+        sampler=sampler,
     )
     print("\nResponse:")
     print(response)
