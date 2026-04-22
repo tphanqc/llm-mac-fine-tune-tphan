@@ -205,9 +205,37 @@ cython_debug/
 marimo/_static/
 marimo/_lsp/
 __marimo__/
-#
+
+# --- Project Specific Ignoring ---
+
+# AI Agent Context
 .agents
 .qwen
 GEMINI.md 
 skills-lock.json
-.*
+
+# Model weights and related files
+*.safetensors
+*.bin
+*.pth
+*.pt
+*.gguf
+*.onnx
+
+# Data and Datasets
+data/raw/*
+data/processed/*
+!data/raw/.gitkeep
+!data/processed/.gitkeep
+*.jsonl
+*.parquet
+*.csv
+
+# Fine-tuned Adapters
+adapters/
+*_adapters/
+llama-3.2-1b-adapters/
+
+# External caches
+.huggingface/
+.cache/huggingface/
